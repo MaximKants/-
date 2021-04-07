@@ -1,0 +1,29 @@
+#include <iostream> 
+ 
+int main() 
+{ 
+    setlocale(0, "rus"); 
+    int number; 
+ 
+    std::cout << "Введите число из диапазона от 1 до 99 " << std::endl; 
+    std::cin >> number;  
+ 
+    if( number < 1 && number > 99)  
+    {
+        std::cout << "Некорретный ввод " << std::endl;  
+        exit(1); 
+    } 
+    else 
+    {   
+        if(number > 20) 
+          number %= 10;
+        switch(number) 
+        { 
+        case 1: std::cout << number << " копейка" << std::endl; break; 
+        case 2:case 3: case 4: std::cout << number << " копейки " << std::endl; break; 
+        case 5: case 6: case 7: case 8: case 9: case 10: case 11: case 12: 
+        case 13: case 14: case 15: case 16: case 17:case 18: case 19:case 20: 
+            std::cout << number << " копеек " << std::endl; break;
+        } 
+    } 
+}
